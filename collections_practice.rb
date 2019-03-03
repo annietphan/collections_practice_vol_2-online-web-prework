@@ -47,9 +47,7 @@ def organize_schools(array)
   location_h = {}
   array.collect {|key, value| location_h[value[:location]] = []}
   location_h.each do |key, value|
-    array.each do |key1, value1|
-      if key == value1[:location]then value << key1
-      end
+    array.each{|key1, value1| if key == value1[:location]then value << key1 end}
   end
 
   end
