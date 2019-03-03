@@ -42,3 +42,9 @@ def find_cool(array)
     item.any? {|k,v| v == "cool"}
   end
 end
+
+def organize_schools(array)
+  location_h = {}
+  array.collect {|key, value| location_h[v[:location]] = []}
+  location_h.each {|key, value|array.each{|key1, value1| if key == value1[:location]then value << key1 end}}
+  end
